@@ -1,0 +1,37 @@
+{
+  "name": "car-rental",
+  "version": "1.0.0",
+  "description": "car rental app",
+  "main": "index.js",
+  "engines": {
+    "node": "14.15.5",
+    "npm": "6.14.11"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryans1801/rent-your-wheels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aryans1801/rent-your-wheels/issues"
+  },
+  "homepage": "https://github.com/aryans1801/rent-your-wheels#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16",
+    "stripe": "^9.8.0",
+    "uuid": "^8.3.2"
+  }
+}
